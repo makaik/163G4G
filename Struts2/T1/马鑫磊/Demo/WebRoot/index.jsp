@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+﻿<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -21,7 +21,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-     <form action="/Dem/helloworld" method="post">
+     <form action="/Demo/helloworld" method="post">
   	请输入你的名字：
   		<input type="text" name="uname"><br>
   		<input type="submit" value="确认">
