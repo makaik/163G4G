@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 登录验证 -->
+<action name="login" class="demo.web.LoginAction">
+ <result name="success">jsp/main.jsp</result>
+ <result name="input">jsp/login.jsp</result>
+</action>

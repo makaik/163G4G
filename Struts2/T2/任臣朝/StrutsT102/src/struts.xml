@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+	<package name="usermanager" extends="struts-default">
+	  <interceptors>
+		<interceptor name="myinterceptor" class="com.wce.struts.interceptor.MyInterceptor" />
+		<interceptor name="check" class="com.wce.struts.interceptor.CheckInterceptor"></interceptor>
+	  </interceptors>
+	
+		<action name="helloworld" class="com.wce.struts.action.HelloWorldAction">
+			<interceptor-ref name="myinterceptor" />
+			
+			<interceptor-ref name="defaultStack" />
+			<result name="success">/jsp/success.jsp</result>
+			<result name="login">/jsp/user.jsp</result>
+		</action>
+		
+		<action name="login" class="com.wce.struts.action.LoginAction">
+			<interceptor-ref name="myinterceptor" />
+			<interceptor-ref name="timer" />
+			<interceptor-ref name="defaultStack" />
+			<result name="success">/jsp/success.jsp</result>
+			<result name="input">/jsp/login.jsp</result>
+		</action>
+	</package>
+</struts>
