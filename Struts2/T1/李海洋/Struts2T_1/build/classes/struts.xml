@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="usermanager" extends="struts-default">
+		<interceptors>
+			<interceptor name="checklogin" class="com.sea.test.interceptor.CheckLoginInterceptor"></interceptor>
+		</interceptors>
+		
+		<action name="login" class="com.sea.test.action.LoginAction">
+			<interceptor-ref name="checklogin"></interceptor-ref>
+			<interceptor-ref name="timer"></interceptor-ref>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+			<result name="success">/jsp/success.jsp</result>
+			<result name="login">/index.jsp</result>
+			<result name="error">/jsp/error.jsp</result>
+		</action>
+	</package>
+</struts>
