@@ -1,9 +1,9 @@
-package com.qhit.t01.action;
+package com.hsj.t02.action;
 
 import com.opensymphony.xwork2.Action;
 
 public class HelloAction implements Action {
-	 private String uname;
+  private String uname;
 	@Override
 	public String execute() throws Exception {
 		// TODO Auto-generated method stub
