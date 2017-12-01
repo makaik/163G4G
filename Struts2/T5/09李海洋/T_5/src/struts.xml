@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<!-- <constant name="struts.enable.DynamicMethodInvocation" value="true" /> -->
+	<package name="usermanager" namespace="/user" extends="struts-default">
+	
+		<action name="add" class="com.sea.adduser.action.UserAction" method="addUser">
+			<result name="tolist" type="redirectAction">allUser</result>
+		</action>
+		
+		<action name="allUser" class="com.sea.adduser.action.UserAction" method="allUser">
+			<result name="list">/jsp/result.jsp</result>
+		</action>
+		
+		<action name="del" class="com.sea.adduser.action.UserAction" method="del">
+			<result name="tolist" type="redirectAction">allUser</result>
+		</action>
+		
+		<action name="perUpdate" class="com.sea.adduser.action.UserAction" method="perUpdate">
+			<result name="update">/jsp/updateuser.jsp</result>
+		</action>
+		
+		<action name="update" class="com.sea.adduser.action.UserAction" method="update">
+			<result name="tolist" type="redirectAction">allUser</result>
+		</action>
+	</package>
+</struts>
